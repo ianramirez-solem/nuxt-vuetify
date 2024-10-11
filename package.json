@@ -1,0 +1,42 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@ckeditor/ckeditor5-build-classic": "^43.2.0",
+    "@ckeditor/ckeditor5-vue": "^7.2.0",
+    "@mdi/font": "^7.4.47",
+    "@nuxt/icon": "^1.5.5",
+    "@pinia/nuxt": "^0.5.5",
+    "@vee-validate/yup": "^4.13.2",
+    "@vueform/multiselect": "^2.6.10",
+    "axios": "^1.7.7",
+    "bcrypt": "^5.1.1",
+    "chart.js": "^4.4.4",
+    "mssql": "^11.0.1",
+    "nuxt": "^3.13.0",
+    "pinia": "^2.2.4",
+    "vee-validate": "^4.13.2",
+    "vue": "latest",
+    "vue-chartjs": "^5.3.1",
+    "vue-form": "^4.10.3",
+    "vue-router": "latest",
+    "yup": "^1.4.0"
+  },
+  "devDependencies": {
+    "@nuxt/types": "^2.18.1",
+    "@nuxtjs/google-fonts": "^3.0.0-1",
+    "nuxt-auth-utils": "^0.4.4",
+    "nuxt-icon": "^1.0.0-beta.7",
+    "sass": "^1.79.4",
+    "vite-plugin-vuetify": "^2.0.4",
+    "vuetify": "^3.7.2"
+  }
+}
