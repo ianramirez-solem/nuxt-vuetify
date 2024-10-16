@@ -3,6 +3,7 @@
       <v-row>
         <v-col cols="12" lg="3">
               <material-stats-card
+                style="overflow: visible;"
                   color="green"
                   icon="mdi-store"
                   title="Revenue"
@@ -13,6 +14,7 @@
           </v-col>
           <v-col cols="12" lg="3">
               <material-stats-card
+                style="overflow: visible;"
                   color="orange"
                   icon="mdi-content-copy"
                   title="Used Space"
@@ -26,6 +28,7 @@
           </v-col>
           <v-col cols="12" lg="3">
               <material-stats-card
+                style="overflow: visible;"
                   color="red"
                   icon="mdi-information-outline"
                   title="Fixed Issues"
@@ -36,6 +39,7 @@
           </v-col>
           <v-col cols="12" lg="3">
               <material-stats-card
+                style="overflow: visible;"
                   color="info"
                   icon="mdi-alert"
                   title="Report Issues"
@@ -48,6 +52,7 @@
 
           <v-col cols="12" lg="4">
               <material-chart-card
+                style="overflow: visible;"
                   color="white"
                   type="Line"
                   :data="dailySalesChart.data"
@@ -68,6 +73,7 @@
           </v-col>
           <v-col cols="12" lg="4">
               <material-chart-card
+                style="overflow: visible;"
                   :data="emailsSubscriptionChart.data"
                   :options="emailsSubscriptionChart.options"
                   color="white"
@@ -84,6 +90,7 @@
           </v-col>
           <v-col cols="12" lg="4">
               <material-chart-card
+                style="overflow: visible;"
                   :data="dataCompletedTasksChart.data"
                   :options="dataCompletedTasksChart.options"
                   color="white"
@@ -101,6 +108,7 @@
 
           <v-col cols="12" lg="4">
               <material-chart-card
+                style="overflow: visible;"
                   :data="DoughnutChart.data"
                   :options="DoughnutChart.options"
                   color="white"
@@ -117,6 +125,7 @@
           </v-col>
           <v-col cols="12" lg="4">
               <material-chart-card
+                style="overflow: visible;"
                   :data="DoughnutChart.data"
                   :options="DoughnutChart.options"
                   color="white"

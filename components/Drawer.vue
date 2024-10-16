@@ -66,6 +66,12 @@ export default {
               icon: 'mdi-format-list-bulleted',
               text: 'Tabs',
           },
+          {
+              to: '/dashboard/notifications',
+              icon: 'mdi-bell',
+              text: 'notifications',
+          },
+
       ],
   }),
 

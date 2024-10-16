@@ -2,7 +2,7 @@
   <v-container fill-height fluid>
     <v-row justify="center">
       <v-col cols="12" md="8">
-        <material-card color="green" title="Edit Profile" text="Complete your profile">
+        <material-card style="overflow: visible;" color="green" title="Edit Profile" text="Complete your profile">
           <v-form>
             <v-container class="py-0">
               <v-row>
@@ -67,7 +67,7 @@
 
       <!-- Card con Avatar y detalles del usuario -->
       <v-col cols="12" md="4">
-        <material-card class="v-card-profile">
+        <material-card style="overflow: visible;" class="v-card-profile">
           <template #offset>
             <v-avatar
               class="mx-auto d-block elevation-6 mt-5"
@@ -127,3 +127,9 @@ definePageMeta({
   middleware: "auth",
 });
 </script>
+
+<style>
+.material-card {
+  overflow: visible;
+}
+</style>

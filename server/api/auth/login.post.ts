@@ -21,14 +21,20 @@ export default defineEventHandler(async (event) => {
 
         // Verifica si se encontró al usuario
         if (!user) {
-            throw new Error('Credenciales incorrectas');
+            return sendError(event, createError({
+                statusCode: 401, // Devolver 401 si las credenciales son incorrectas
+                statusMessage: 'Credenciales incorrectas',
+            }));
         }
 
         // Compara la contraseña ingresada con la almacenada
         const isValidPassword = await bcrypt.compare(password, user.passw);
 
         if (!isValidPassword) {
-            throw new Error('Credenciales incorrectas');
+            return sendError(event, createError({
+                statusCode: 401, // Devolver 401 si las credenciales son incorrectas
+                statusMessage: 'Credenciales incorrectas',
+            }));
         }
 
         // Si las credenciales son correctas, establece la sesión y retorna solo el usuario.

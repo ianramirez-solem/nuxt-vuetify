@@ -12,7 +12,9 @@ export default defineNuxtConfig({
       nuxt.hooks.hook("vite:extendConfig", (config) => config.plugins.push(vuetify()));
     }
   ],
-  css: ['vuetify/lib/styles/main.sass', '@mdi/font/css/materialdesignicons.min.css'],
+
+  css: ['vuetify/lib/styles/main.css', '@mdi/font/css/materialdesignicons.min.css'],
+
   typescript: {shim: false},
   build: {transpile: ["vuetify"] },
   vite: {

@@ -22,7 +22,7 @@
     <!-- Tabla de clientes -->
     <v-row v-else>
       <v-col cols="12">
-        <material-card color="cyan" title="Customer Data" text="Manage customers here">
+        <material-card style="overflow: visible;" color="cyan" title="Customer Data" text="Manage customers here">
           <v-data-table :headers="headers" :items="paginatedUsers" hide-default-footer />
         </material-card>
       </v-col>
