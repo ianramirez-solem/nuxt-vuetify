@@ -82,7 +82,7 @@ export default {
     },
 };
 </script>
-<style lang="scss">
+<style>
 .v-card--material-card {
     overflow: visible;
 }

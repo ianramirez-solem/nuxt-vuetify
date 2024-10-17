@@ -1,147 +1,147 @@
 <template>
-  <v-container fluid>
-      <v-row>
-        <v-col cols="12" lg="3">
-              <material-stats-card
-                style="overflow: visible;"
-                  color="green"
-                  icon="mdi-store"
-                  title="Revenue"
-                  value="$34,245"
-                  sub-icon="mdi-calendar"
-                  sub-text="Last 24 Hours"
+    <v-container fluid>
+        <v-row>
+            <v-col cols="12" lg="3">
+                <material-stats-card
+                    style="overflow: visible;"
+                    color="green"
+                    icon="mdi-store"
+                    title="Revenue"
+                    value="$34,245"
+                    sub-icon="mdi-calendar"
+                    sub-text="Last 24 Hours"
               />
-          </v-col>
-          <v-col cols="12" lg="3">
-              <material-stats-card
-                style="overflow: visible;"
-                  color="orange"
-                  icon="mdi-content-copy"
-                  title="Used Space"
-                  value="49/50"
-                  small-value="GB"
-                  sub-icon="mdi-alert"
-                  sub-icon-color="error"
-                  sub-text="Get More Space..."
-                  sub-text-color="text-primary"
-              />
-          </v-col>
-          <v-col cols="12" lg="3">
-              <material-stats-card
-                style="overflow: visible;"
-                  color="red"
-                  icon="mdi-information-outline"
-                  title="Fixed Issues"
-                  value="75"
-                  sub-icon="mdi-tag"
-                  sub-text="Tracked "
-              />
-          </v-col>
-          <v-col cols="12" lg="3">
-              <material-stats-card
-                style="overflow: visible;"
-                  color="info"
-                  icon="mdi-alert"
-                  title="Report Issues"
-                  value="245"
-                  sub-icon="mdi-update"
-                  sub-text="Just Updated"
-              />
-          </v-col>         
+            </v-col>
+            <v-col cols="12" lg="3">
+                <material-stats-card
+                    style="overflow: visible;"
+                    color="orange"
+                    icon="mdi-content-copy"
+                    title="Used Space"
+                    value="49/50"
+                    small-value="GB"
+                    sub-icon="mdi-alert"
+                    sub-icon-color="error"
+                    sub-text="Get More Space..."
+                    sub-text-color="text-primary"
+                />
+            </v-col>
+            <v-col cols="12" lg="3">
+                <material-stats-card
+                    style="overflow: visible;"
+                    color="red"
+                    icon="mdi-information-outline"
+                    title="Fixed Issues"
+                    value="75"
+                    sub-icon="mdi-tag"
+                    sub-text="Tracked "
+                />
+            </v-col>
+            <v-col cols="12" lg="3">
+                <material-stats-card
+                    style="overflow: visible;"
+                    color="info"
+                    icon="mdi-alert"
+                    title="Report Issues"
+                    value="245"
+                    sub-icon="mdi-update"
+                    sub-text="Just Updated"
+                />
+            </v-col>         
 
 
-          <v-col cols="12" lg="4">
-              <material-chart-card
-                style="overflow: visible;"
-                  color="white"
-                  type="Line"
-                  :data="dailySalesChart.data"
-                  :options="dailySalesChart.options"
-              >
-                  <h4 class="title font-weight-light">Daily Sales</h4>
-                  <p class="category d-inline-flex font-weight-light">
-                      <v-icon color="green" small>mdi-arrow-up</v-icon>
-                      <span class="green--text">55%</span>
-                      &nbsp; increase in today's sales
-                  </p>
+            <v-col cols="12" lg="4">
+                <material-chart-card
+                    style="overflow: visible;"
+                    color="white"
+                    type="Line"
+                    :data="dailySalesChart.data"
+                    :options="dailySalesChart.options"
+                >
+                    <h4 class="title font-weight-light">Daily Sales</h4>
+                    <p class="category d-inline-flex font-weight-light">
+                        <v-icon color="green" small>mdi-arrow-up</v-icon>
+                        <span class="green--text">55%</span>
+                        &nbsp; increase in today's sales
+                    </p>
 
-                  <template #actions>
-                      <v-icon class="mr-2" small>mdi-clock-outline</v-icon>
-                      <span class="caption grey--text font-weight-light">updated 4 minutes ago</span>
-                  </template>
-              </material-chart-card>
-          </v-col>
-          <v-col cols="12" lg="4">
-              <material-chart-card
-                style="overflow: visible;"
-                  :data="emailsSubscriptionChart.data"
-                  :options="emailsSubscriptionChart.options"
-                  color="white"
-                  type="Bar"
-              >
-                  <h4 class="title font-weight-light">Email Subscription</h4>
-                  <p class="category d-inline-flex font-weight-light">Last Campaign Performance</p>
+                    <template #actions>
+                        <v-icon class="mr-2" small>mdi-clock-outline</v-icon>
+                        <span class="caption grey--text font-weight-light">updated 4 minutes ago</span>
+                    </template>
+                </material-chart-card>
+            </v-col>
+            <v-col cols="12" lg="4">
+                <material-chart-card
+                    style="overflow: visible;"
+                    :data="emailsSubscriptionChart.data"
+                    :options="emailsSubscriptionChart.options"
+                    color="white"
+                    type="Bar"
+                >
+                    <h4 class="title font-weight-light">Email Subscription</h4>
+                    <p class="category d-inline-flex font-weight-light">Last Campaign Performance</p>
 
-                  <template #actions>
-                      <v-icon class="mr-2" small>mdi-clock-outline</v-icon>
-                      <span class="caption grey--text font-weight-light">updated 10 minutes ago</span>
-                  </template>
-              </material-chart-card>
-          </v-col>
-          <v-col cols="12" lg="4">
-              <material-chart-card
-                style="overflow: visible;"
-                  :data="dataCompletedTasksChart.data"
-                  :options="dataCompletedTasksChart.options"
-                  color="white"
-                  type="Line"
-              >
-                  <h3 class="title font-weight-light">Completed Tasks</h3>
-                  <p class="category d-inline-flex font-weight-light">Last Last Campaign Performance</p>
+                    <template #actions>
+                        <v-icon class="mr-2" small>mdi-clock-outline</v-icon>
+                        <span class="caption grey--text font-weight-light">updated 10 minutes ago</span>
+                    </template>
+                </material-chart-card>
+            </v-col>
+            <v-col cols="12" lg="4">
+                <material-chart-card
+                    style="overflow: visible;"
+                    :data="dataCompletedTasksChart.data"
+                    :options="dataCompletedTasksChart.options"
+                    color="white"
+                    type="Line"
+                >
+                    <h3 class="title font-weight-light">Completed Tasks</h3>
+                    <p class="category d-inline-flex font-weight-light">Last Last Campaign Performance</p>
 
-                  <template #actions>
-                      <v-icon class="mr-2" small>mdi-clock-outline</v-icon>
-                      <span class="caption grey--text font-weight-light">campaign sent 26 minutes ago</span>
-                  </template>
-              </material-chart-card>
-          </v-col> 
+                    <template #actions>
+                        <v-icon class="mr-2" small>mdi-clock-outline</v-icon>
+                        <span class="caption grey--text font-weight-light">campaign sent 26 minutes ago</span>
+                    </template>
+                </material-chart-card>
+            </v-col> 
 
-          <v-col cols="12" lg="4">
-              <material-chart-card
-                style="overflow: visible;"
-                  :data="DoughnutChart.data"
-                  :options="DoughnutChart.options"
-                  color="white"
-                  type="Doughnut"
-              >
-                  <h3 class="title font-weight-light">Issues</h3>
-                  <p class="category d-inline-flex font-weight-light">Last Issues Performance</p>
+            <v-col cols="12" lg="4">
+                <material-chart-card
+                    style="overflow: visible;"
+                    :data="DoughnutChart.data"
+                    :options="DoughnutChart.options"
+                    color="white"
+                    type="Doughnut"
+                >
+                    <h3 class="title font-weight-light">Issues</h3>
+                    <p class="category d-inline-flex font-weight-light">Last Issues Performance</p>
 
-                  <template #actions>
-                      <v-icon class="mr-2" small>mdi-clock-outline</v-icon>
-                      <span class="caption grey--text font-weight-light">Today</span>
-                  </template>
-              </material-chart-card>
-          </v-col>
-          <v-col cols="12" lg="4">
-              <material-chart-card
-                style="overflow: visible;"
-                  :data="DoughnutChart.data"
-                  :options="DoughnutChart.options"
-                  color="white"
-                  type="Pie"
-              >
-                  <h3 class="title font-weight-light">Issues</h3>
-                  <p class="category d-inline-flex font-weight-light">Last Issues Performance</p>
+                    <template #actions>
+                        <v-icon class="mr-2" small>mdi-clock-outline</v-icon>
+                        <span class="caption grey--text font-weight-light">Today</span>
+                    </template>
+                </material-chart-card>
+            </v-col>
+            <v-col cols="12" lg="4">
+                <material-chart-card
+                    style="overflow: visible;"
+                    :data="DoughnutChart.data"
+                    :options="DoughnutChart.options"
+                    color="white"
+                    type="Pie"
+                >
+                    <h3 class="title font-weight-light">Issues</h3>
+                    <p class="category d-inline-flex font-weight-light">Last Issues Performance</p>
 
-                  <template #actions>
-                      <v-icon class="mr-2" small>mdi-clock-outline</v-icon>
-                      <span class="caption grey--text font-weight-light">Today</span>
-                  </template>
-              </material-chart-card>
-          </v-col> 
-      </v-row>
-  </v-container>
+                    <template #actions>
+                        <v-icon class="mr-2" small>mdi-clock-outline</v-icon>
+                        <span class="caption grey--text font-weight-light">Today</span>
+                    </template>
+                </material-chart-card>
+            </v-col> 
+        </v-row>
+    </v-container>
 </template>
 
 <script>
