@@ -109,6 +109,29 @@
             <v-col cols="12" lg="4">
                 <material-chart-card
                     style="overflow: visible;"
+                    color="white"
+                    type="Line"
+                    :data="SalesOptionsChart.data"
+                    :options="SalesOptionsChart.options"
+                >
+                    <h4 class="title font-weight-light">Daily Sales</h4>
+                    <p class="category d-inline-flex font-weight-light">
+                        <v-icon color="green" small>mdi-arrow-up</v-icon>
+                        <span class="green--text">55%</span>
+                        &nbsp; increase in today's sales
+                    </p>
+
+                    <template #actions>
+                        <v-icon class="mr-2" small>mdi-clock-outline</v-icon>
+                        <span class="caption grey--text font-weight-light">updated 4 minutes ago</span>
+                    </template>
+                </material-chart-card>
+            </v-col>
+
+
+            <v-col cols="12" lg="4">
+                <material-chart-card
+                    style="overflow: visible;"
                     :data="DoughnutChart.data"
                     :options="DoughnutChart.options"
                     color="white"
@@ -231,9 +254,40 @@ export default {
                 },
             },
           },
+          SalesOptionsChart: {
+              data: {
+                  labels: ['M', 'T', 'W', 'T', 'F', 'S', 'S'],
+                  datasets: [{ label: 'dailySales', data: [12, 17, 7, 17, 23, 18, 38], backgroundColor: 'rgba(75, 192, 192, 1)', borderColor: "rgba(75, 192, 192, 0.3)", tension: 0.4 }],
+              },
+              options: {
+                  responsive: true,
+                  maintainAspectRatio: false,
+                  plugins: {
+                    legend: {
+                        position: "top",
+                    },
+                    tooltip: {
+                        callbacks: {
+                        label: function (tooltipItem) {
+                            return tooltipItem.dataset.label + ": " + tooltipItem.raw;
+                        },
+                        },
+                    },
+                    },
+                    scales: {
+                    x: {
+                        beginAtZero: true,
+                    },
+                    y: {
+                        beginAtZero: true,
+                    },
+                    },
+              },
+          },
+
 
           tabs: 'one',
-          list: [false, false, false],
+          list: [false, false, false, false, false, false],
       };
   },
   methods: {
